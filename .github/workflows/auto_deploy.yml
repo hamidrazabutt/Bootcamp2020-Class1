@@ -1,12 +1,10 @@
 # This is a basic workflow to help you get started with Actions
 
-name: Bootcamp 2020 Urdu
+name: Continuous deployment
 
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the main branch
-on:
-  push:
-    branches: [ main ]
+on: [push]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -19,12 +17,13 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
+      - run: echo "Setting up NodeJs"
 
       # Runs a single command using the runners shell
-      - name: Instaling Node
-      - uses: actions/setup-node@v2
+      - name: Setup NodeJs
+      - uses: actions/setup-node@v1
         with:
-           node-version: '12'
+           node-version: 12.x
 
       # Runs a set of commands using the runners shell
       - name: Installing surge

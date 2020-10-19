@@ -15,5 +15,5 @@ jobs:
 
       - run: npm install -g surge
       - run: echo "Deploying website"
-      - run: surge ./ &{{ http://new123-spring.surge.sh/ }} --token $ {{ secrets.SURGE_TOKEN }}
+      - run: surge ./ &{{ secrets.SURGE_DOMAIN }} --token $ {{ secrets.SURGE_TOKEN }}
       - run: echo "Please visit => &{{ http://new123-spring.surge.sh }}"

@@ -1,5 +1,5 @@
 name: Continuous deployment
-on: push
+on: [push]
 
 jobs:
   deploy:

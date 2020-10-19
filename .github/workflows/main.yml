@@ -30,4 +30,4 @@ jobs:
       - name: Run a multi-line script
         run: npm install --global surge
       - name: deploying using surge
-        run: surge ./ new123-spring.surge.sh --token &{{ secrets.SURGE_TOKEN }}
+        run: surge ./ new123-spring.surge.sh --token &{{ secrets.259cfc61c973d2c411f7b7c58072a8ce }}

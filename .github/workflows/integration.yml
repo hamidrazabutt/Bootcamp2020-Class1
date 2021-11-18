@@ -7,24 +7,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-<<<<<<< HEAD
-      - run: echo "Setting up NodeJs"
-      - name: Setup NodeJs
-        uses: actions/setup-node@v1
-        with:
-          node-version: 12.x
-
-      - name: Installing surge
-        run: npm install -g surge
-      - name: deploying using surge
-        run: echo "Deploying website"
-      - run: surge ./ ${{ secrets.SURGE_DOMAIN }} --token ${{ secrets.SURGE_TOKEN }}
-
-      - run: echo "Please visit => ${{ secrets.SURGE_DOMAIN }}"
-=======
             - run: npm install -g surge
             - run: echo "Deploying website"
             - run: surge ./ http://bootcamp2020-class1sample.surge.sh --token ${{ secrets.SURGE_TOKEN }} 
           
             - run: echo "Please visit => http://bootcamp2020-class1sample.surge.sh/"
->>>>>>> 3f95ac5f09dcb570e8138b07f238be826972851b

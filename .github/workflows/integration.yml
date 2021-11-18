@@ -12,8 +12,7 @@ jobs:
         with:
           node-version: 12
 
-            - name: Installing Surge
-              run: npm install --global surge
+            - run: npm install --global surge
             - name: Deploying website using surge
              run: surge ./ http://bootcamp2020-class1sample.surge.sh --token ${{ secrets.SURGE_TOKEN }} 
           

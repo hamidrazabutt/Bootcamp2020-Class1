@@ -1,6 +1,5 @@
 # Bootcamp2020-Class1
-http://new123-spring.surge.sh/
-
+http://bootcamp2020-class1sample.surge.sh/
 
 # Bootcamp 2020 Class 1: Setup Website Development Environment
 
@@ -55,7 +54,7 @@ https://help.github.com/en/actions/configuring-and-managing-workflows/configurin
 
 15. open website in browser
 
-http://bootcamp2020_sample1.surge.sh/
+http://bootcamp2020-class1sample.surge.sh/
 
 16. Submit your github repo URL here in the issues of the assignment repo
 

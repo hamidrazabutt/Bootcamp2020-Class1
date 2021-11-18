@@ -7,8 +7,13 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-            - run: npm install -g surge
-            - run: echo "Deploying website"
-            - run: surge ./ http://bootcamp2020-class1sample.surge.sh --token ${{ secrets.SURGE_TOKEN }} 
+      - name: Installing Node
+        uses: actions/setup-node@v2-beta
+        with:
+          node-version: 12
+
+            - name: Installing surge
+              run: npm install -g surge
+            - name: Deploying website using surge
+             run: surge ./ http://bootcamp2020-class1sample.surge.sh --token ${{ secrets.SURGE_TOKEN }} 
           
-            - run: echo "Please visit => http://bootcamp2020-class1sample.surge.sh/"

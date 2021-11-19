@@ -7,7 +7,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-        # Runs a single command using the runners shell
+      # Runs a single command using the runners shell
       - name: Installing Node
         uses: actions/setup-node@v2-beta
         with:
@@ -17,3 +17,4 @@ jobs:
       - name: Installing surge
         run: npm install --global surge
       - name: deploying using surge
+        run: surge ./ http://bootcamp2020-class1sample.surge.sh --token ${{ secrets.SURGE_TOKEN }}
